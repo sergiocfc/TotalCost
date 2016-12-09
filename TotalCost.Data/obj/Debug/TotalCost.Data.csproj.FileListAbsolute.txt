@@ -1,0 +1,10 @@
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.Data\bin\Debug\TotalCost.Data.dll.config
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.Data\bin\Debug\TotalCost.Data.dll
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.Data\bin\Debug\TotalCost.Data.pdb
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.Data\bin\Debug\EntityFramework.dll
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.Data\bin\Debug\EntityFramework.xml
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.Data\obj\Debug\TotalCost.Data.csprojResolveAssemblyReference.cache
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.Data\obj\Debug\TotalCost.Data.dll
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.Data\obj\Debug\TotalCost.Data.pdb
