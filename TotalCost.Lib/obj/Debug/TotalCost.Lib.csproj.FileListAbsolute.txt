@@ -1,0 +1,17 @@
+c:\users\roman\documents\visual studio 2017\Projects\TotalCost\TotalCost.Lib\bin\Debug\TotalCost.Lib.dll
+c:\users\roman\documents\visual studio 2017\Projects\TotalCost\TotalCost.Lib\bin\Debug\TotalCost.Lib.pdb
+c:\users\roman\documents\visual studio 2017\Projects\TotalCost\TotalCost.Lib\bin\Debug\TotalCost.Lib.pri
+c:\users\roman\documents\visual studio 2017\Projects\TotalCost\TotalCost.Lib\obj\Debug\TotalCost.Lib.csprojResolveAssemblyReference.cache
+c:\users\roman\documents\visual studio 2017\Projects\TotalCost\TotalCost.Lib\obj\Debug\TotalCost.Lib.dll
+c:\users\roman\documents\visual studio 2017\Projects\TotalCost\TotalCost.Lib\obj\Debug\TotalCost.Lib.pdb
+c:\users\roman\documents\visual studio 2017\Projects\TotalCost\TotalCost.Lib\obj\Debug\priconfig.xml
+c:\users\roman\documents\visual studio 2017\Projects\TotalCost\TotalCost.Lib\obj\Debug\priconfig.xml.intermediate
+c:\users\roman\documents\visual studio 2017\Projects\TotalCost\TotalCost.Lib\obj\Debug\layout.resfiles
+c:\users\roman\documents\visual studio 2017\Projects\TotalCost\TotalCost.Lib\obj\Debug\layout.resfiles.intermediate
+c:\users\roman\documents\visual studio 2017\Projects\TotalCost\TotalCost.Lib\obj\Debug\resources.resfiles
+c:\users\roman\documents\visual studio 2017\Projects\TotalCost\TotalCost.Lib\obj\Debug\resources.resfiles.intermediate
+c:\users\roman\documents\visual studio 2017\Projects\TotalCost\TotalCost.Lib\obj\Debug\pri.resfiles
+c:\users\roman\documents\visual studio 2017\Projects\TotalCost\TotalCost.Lib\obj\Debug\pri.resfiles.intermediate
+c:\users\roman\documents\visual studio 2017\Projects\TotalCost\TotalCost.Lib\obj\Debug\qualifiers.txt
+c:\users\roman\documents\visual studio 2017\Projects\TotalCost\TotalCost.Lib\obj\Debug\qualifiers.txt.intermediate
+c:\users\roman\documents\visual studio 2017\Projects\TotalCost\TotalCost.Lib\obj\Debug\MultipleQualifiersPerDimensionFound.txt
