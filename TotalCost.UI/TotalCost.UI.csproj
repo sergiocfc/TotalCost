@@ -101,10 +101,12 @@
     <Compile Include="Entity\Group.cs" />
     <Compile Include="Entity\Limit.cs" />
     <Compile Include="Entity\Payment.cs" />
+    <Compile Include="Logic\IDataRepository.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\StatByGroupViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
