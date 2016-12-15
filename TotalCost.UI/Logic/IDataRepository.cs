@@ -8,13 +8,13 @@ using TotalCost.UI.ViewModels;
 
 namespace TotalCost.UI.Logic
 {
-    interface IDataRepository
+    interface IDataRepository : IDisposable
     {
         /// <summary>
-        /// Добавить счет.
+        /// Добавить счет. Максимальное количество - 4.
         /// </summary>
         /// <param name="newBill"></param>
-        void AddBill(Bill newBill);
+        bool AddBill(Bill newBill);
         /// <summary>
         /// Получить остаток на счете.
         /// </summary>
