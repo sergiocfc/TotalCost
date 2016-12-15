@@ -89,12 +89,18 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="App.config" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Entity\Bill.cs" />
+    <Compile Include="Entity\Context.cs" />
+    <Compile Include="Entity\Group.cs" />
+    <Compile Include="Entity\Limit.cs" />
+    <Compile Include="Entity\Payment.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
