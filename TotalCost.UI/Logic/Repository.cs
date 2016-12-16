@@ -74,49 +74,104 @@ namespace TotalCost.UI.Logic
                           select g);
 
             var balance = groups.Single(g => g.Key == GroupType.Income).Sum(g => g.Sum) -
-                          groups.Single(g => g.Key == GroupType.Consumption).Sum(g => g.Sum); 
+                          groups.Single(g => g.Key == GroupType.Consumption).Sum(g => g.Sum);
 
             return balance;
         }
 
-        public List<StatByGroupViewModel> GetStatByGroups(TimeIntervalType timeInvtervalType)
+        private Dictionary<TimeIntervalType, Func<Payment, bool>> InIntervalDic = new Dictionary<TimeIntervalType, Func<Payment, bool>>()
+        {
+            {TimeIntervalType.Day, p => p.Date >= DateTime.Today },
+            {TimeIntervalType.Week, (p) => {
+                var now = DateTime.Now;
+                return (p.Date >= new DateTime(now.Year, now.Month, now.Day) - new TimeSpan((int)now.DayOfWeek, 0, 0, 0));
+            } },
+            {TimeIntervalType.Month, (p) => {
+                var now = DateTime.Now;
+                return (p.Date >= new DateTime(now.Year, now.Month, 1));
+            } },
+            {TimeIntervalType.Year, (p) => p.Date.Year == DateTime.Now.Year },
+            {TimeIntervalType.Custom, null }
+        };
+
+        public Dictionary<Group, double> GetSumByGroupsDuring(TimeIntervalType timeIntervalType, DateTime dateIn)
         {
             throw new NotImplementedException();
+        }
+
+        public List<StatByGroupViewModel> GetStatByGroups(TimeIntervalType tType)
+        {
+            if (tType == TimeIntervalType.Custom)
+                throw new ArgumentException("Интервал не может быть custom");
+
+            var query = from p in c.Payments
+                        where InIntervalDic[tType](p)
+                        group p by p.Group into stat
+                        select new StatByGroupViewModel
+                        {
+                            Group = stat.Key,
+                            Min = stat.Min(p => p.Sum),
+                            Average = stat.Average(p => p.Sum),
+                            Max = stat.Max(p => p.Sum)
+                        };
+
+            return query.ToList();
         }
 
         public Dictionary<Group, double> GetSumByGroupsDuring()
         {
-            throw new NotImplementedException();
+            return GetSumByGroupsDuring(TimeIntervalType.Day);
         }
 
-        public Dictionary<Group, double> GetSumByGroupsDuring(TimeIntervalType timeIntervalType)
+        public Dictionary<Group, double> GetSumByGroupsDuring(TimeIntervalType tType)
         {
-            throw new NotImplementedException();
+            if (InIntervalDic[TimeIntervalType.Custom] == null)
+                throw new ArgumentNullException("Тип интервала custom не определен");
+
+            var query = from p in c.Payments
+                        where InIntervalDic[tType](p)
+                        group p.Sum by p.Group into g
+                        select new
+                        {
+                            Group = g.Key,
+                            Total = g.Sum(s => s)
+                        };
+
+            return query.ToDictionary(a => a.Group, a => a.Total);
         }
 
         public Dictionary<Group, double> GetSumByGroupsDuring(DateTime startDate, DateTime endDate)
         {
-            throw new NotImplementedException();
+            InIntervalDic[TimeIntervalType.Custom] = (p) => (p.Date >= startDate && p.Date <= endDate);
+            return GetSumByGroupsDuring(TimeIntervalType.Custom);
         }
 
-        public double GetSumExceed(Group group)
-        {
-            throw new NotImplementedException();
-        }
-
-        public double GetTotalSumOfGroup(Group group)
+        public double GetSumExceed(Group _group)
         {
             throw new NotImplementedException();
         }
 
         public void RemoveBill(Bill billToRemove, Bill saveBill)
         {
-            throw new NotImplementedException();
+            if (c.Bills.Count() == 1)
+                throw new ArgumentOutOfRangeException("Количество счетов не может быть равно 0");
+            if (billToRemove == saveBill)
+                throw new ArgumentException("Счета должны быть разными");
+
+            // TODO: делать это через платеж.
+            saveBill.Sum += billToRemove.Sum;
+            c.Bills.Remove(billToRemove);
+            c.SaveChanges();
         }
 
         public void RemoveGroup(Group groupToRemove, Group saveGroup)
         {
-            throw new NotImplementedException();
+            if (groupToRemove == saveGroup)
+                throw new ArgumentException("Группы должны быть разными");
+
+            saveGroup.Payments.AddRange(groupToRemove.Payments);
+            c.Groups.Remove(groupToRemove);
+            c.SaveChanges();
         }
 
         public void RemoveLimit(Limit limit)
@@ -126,7 +181,8 @@ namespace TotalCost.UI.Logic
 
         public void RemovePayment(Payment payment)
         {
-            throw new NotImplementedException();
+            c.Payments.Remove(payment);
+            c.SaveChanges();
         }
 
         public void TransferMoney(Bill billFrom, Bill billTo, double sum)

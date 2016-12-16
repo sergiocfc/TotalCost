@@ -40,22 +40,22 @@ namespace TotalCost.UI.Logic
         /// <param name="newPayment"></param>
         void AddPayment(Payment newPayment);
         /// <summary>
-        /// Получить сумму платежей для группы.
-        /// </summary>
-        /// <param name="group"></param>
-        /// <returns></returns>
-        double GetTotalSumOfGroup(Group group);
-        /// <summary>
         /// Получить доходы по группам за текущий день.
         /// </summary>
         /// <returns></returns>
         Dictionary<Group, double> GetSumByGroupsDuring();
         /// <summary>
-        /// Получить доходы по группам за промежуток времени.
+        /// Получить доходы по группам за текущий промежуток времени.
         /// </summary>
         /// <param name="timeIntervalType">Тип текущего периода.</param>
         /// <returns>Возвращает список пар ключ-значение сумм доходов по группам</returns>
         Dictionary<Group, double> GetSumByGroupsDuring(TimeIntervalType timeIntervalType);
+        /// <summary>
+        /// Получить доходы по группам за промежуток времени.
+        /// </summary>
+        /// <param name="timeIntervalType">Тип текущего периода.</param>
+        /// <returns>Возвращает список пар ключ-значение сумм доходов по группам</returns>
+        Dictionary<Group, double> GetSumByGroupsDuring(TimeIntervalType timeIntervalType, DateTime dateIn);
         /// <summary>
         /// Получить доход по группам за промежуток времени.
         /// </summary>
