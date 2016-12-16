@@ -116,6 +116,7 @@
                     </TextBlock.Foreground>0</TextBlock>
 
             </Grid>
+            <Button Margin="10" HorizontalAlignment="Center" Click="Button_Click">ADD BILL</Button>
         </StackPanel>
 
     </Grid>

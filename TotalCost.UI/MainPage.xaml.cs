@@ -1,4 +1,6 @@
-﻿using Windows.UI.Xaml.Controls;
+﻿using TotalCost.UI.Entity;
+using TotalCost.UI.Logic;
+using Windows.UI.Xaml.Controls;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace TotalCost.UI
@@ -11,6 +13,20 @@ namespace TotalCost.UI
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            using (Repository repo = new Repository())
+            {
+                Bill b = new Bill
+                {
+                    Name = "Сбер",
+                    Type = BillType.Card,
+                    Sum = 3378.05
+                };
+                repo.AddBill(b);
+            }
         }
     }
 }

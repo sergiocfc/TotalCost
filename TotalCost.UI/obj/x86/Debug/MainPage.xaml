@@ -116,6 +116,7 @@
                     </TextBlock.Foreground>0</TextBlock>
 
             </Grid>
+            <Button x:ConnectionId='1' Margin="10" HorizontalAlignment="Center"                     >ADD BILL</Button>
         </StackPanel>
 
     </Grid>

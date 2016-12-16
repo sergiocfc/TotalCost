@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Microsoft.EntityFrameworkCore;
 using TotalCost.UI.Entity;
+using TotalCost.UI.Logic;
 
 namespace TotalCost.UI
 {
@@ -30,6 +31,17 @@ namespace TotalCost.UI
         /// </summary>
         public App()
         {
+            using (var repo = new Repository())
+            {
+                var bill = new Bill
+                {
+                    Name = "Сбер",
+                    Sum = 3655,
+                    Type = BillType.Card
+                };
+
+                repo.AddBill(bill);
+            }
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }

@@ -28,17 +28,17 @@
     <AppXManifest Include="C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-15T19:29:31.205</Modified>
+      <Modified>2016-12-16T04:47:45.675</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\TotalCost.UI.exe">
       <PackagePath>entrypoint\TotalCost.UI.exe</PackagePath>
-      <Modified>2016-12-15T19:29:29.126</Modified>
+      <Modified>2016-12-16T04:47:45.109</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\TotalCost.UI.exe.config">
       <PackagePath>TotalCost.UI.exe.config</PackagePath>
-      <Modified>2016-12-15T18:26:54.980</Modified>
+      <Modified>2016-12-16T04:40:20.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Roman\.nuget\packages\Microsoft.AspNetCore.Hosting.Abstractions\1.1.0\lib\netstandard1.3\Microsoft.AspNetCore.Hosting.Abstractions.dll">
       <PackagePath>Microsoft.AspNetCore.Hosting.Abstractions.dll</PackagePath>
@@ -652,7 +652,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\TotalCost.UI.xr.xml">
       <PackagePath>TotalCost.UI.xr.xml</PackagePath>
-      <Modified>2016-12-09T11:56:48.733</Modified>
+      <Modified>2016-12-15T21:40:24.354</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -661,11 +661,11 @@
     <AppxPackagedFile Include="C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-15T19:29:30.045</Modified>
+      <Modified>2016-12-16T04:41:40.317</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\Core\TotalCost.UI.exe">
       <PackagePath>TotalCost.UI.exe</PackagePath>
-      <Modified>2016-12-15T19:29:31.190</Modified>
+      <Modified>2016-12-16T04:47:45.671</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -24,6 +24,8 @@ namespace TotalCost.UI.Logic
                 throw new ArgumentOutOfRangeException("Баланс нового счета не может быть отрицательным.");
 
             c.Bills.Add(newBill);
+            c.SaveChanges();
+
             return true;
         }
 
