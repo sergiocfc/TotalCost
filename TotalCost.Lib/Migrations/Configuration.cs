@@ -33,7 +33,7 @@
                         },
                         new Group
                         {
-                            Name = "TransferFrom",
+                            Name = "TransferTo",
                             Type = GroupType.Income
                         },
                         new Group
