@@ -31,17 +31,21 @@ namespace TotalCost.UI
         /// </summary>
         public App()
         {
-            using (var repo = new Repository())
+            using (var c = new Context())
             {
-                var bill = new Bill
-                {
-                    Name = "Сбер",
-                    Sum = 3655,
-                    Type = BillType.Card
-                };
-
-                repo.AddBill(bill);
+                c.Database.Migrate();
             }
+
+            //using (var repo = new Repository())
+            //{
+            //    var bill = new Bill
+            //    {
+            //        Name = "Сбер",
+            //        Type = BillType.Card
+            //    };
+
+            //    repo.AddBill(bill);
+            //}
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }

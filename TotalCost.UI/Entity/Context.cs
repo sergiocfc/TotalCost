@@ -11,7 +11,6 @@ namespace TotalCost.UI.Entity
     {
         public DbSet<Bill> Bills { get; set; }
         public DbSet<Group> Groups { get; set; }
-        public DbSet<Limit> Limits { get; set; }
         public DbSet<Payment> Payments { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

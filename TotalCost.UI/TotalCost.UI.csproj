@@ -99,16 +99,15 @@
     <Compile Include="Entity\Bill.cs" />
     <Compile Include="Entity\Context.cs" />
     <Compile Include="Entity\Group.cs" />
-    <Compile Include="Entity\Limit.cs" />
     <Compile Include="Entity\Payment.cs" />
     <Compile Include="Logic\IDataRepository.cs" />
     <Compile Include="Logic\Repository.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20161216044022_MyFirstMigration.cs" />
-    <Compile Include="Migrations\20161216044022_MyFirstMigration.designer.cs">
-      <DependentUpon>20161216044022_MyFirstMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20161218104355_Init.cs" />
+    <Compile Include="Migrations\20161218104355_Init.designer.cs">
+      <DependentUpon>20161218104355_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

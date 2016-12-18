@@ -13,7 +13,6 @@ namespace TotalCost.UI.Entity
     {
         public int Id { get; set; }
         public BillType Type { get; set; }
-        public double Sum { get; set; }
         public string Name { get; set; }
         public virtual List<Payment> Payments { get; set; }
     }

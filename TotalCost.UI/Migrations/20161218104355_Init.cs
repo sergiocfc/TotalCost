@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TotalCost.UI.Migrations
 {
-    public partial class MyFirstMigration : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,6 @@ namespace TotalCost.UI.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(nullable: true),
-                    Sum = table.Column<double>(nullable: false),
                     Type = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -30,36 +29,13 @@ namespace TotalCost.UI.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Icon = table.Column<string>(nullable: true),
+                    Limit = table.Column<double>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     Type = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Groups", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Limits",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    EndDate = table.Column<DateTime>(nullable: false),
-                    GroupId = table.Column<int>(nullable: true),
-                    StartDate = table.Column<DateTime>(nullable: false),
-                    Sum = table.Column<double>(nullable: false),
-                    SumExceed = table.Column<double>(nullable: false),
-                    TimeType = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Limits", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Limits_Groups_GroupId",
-                        column: x => x.GroupId,
-                        principalTable: "Groups",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -92,11 +68,6 @@ namespace TotalCost.UI.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Limits_GroupId",
-                table: "Limits",
-                column: "GroupId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Payments_BillId",
                 table: "Payments",
                 column: "BillId");
@@ -109,9 +80,6 @@ namespace TotalCost.UI.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Limits");
-
             migrationBuilder.DropTable(
                 name: "Payments");
 

@@ -8,8 +8,8 @@ using TotalCost.UI.Entity;
 namespace TotalCost.UI.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20161216044022_MyFirstMigration")]
-    partial class MyFirstMigration
+    [Migration("20161218104355_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -22,8 +22,6 @@ namespace TotalCost.UI.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name");
-
-                    b.Property<double>("Sum");
 
                     b.Property<int>("Type");
 
@@ -39,6 +37,8 @@ namespace TotalCost.UI.Migrations
 
                     b.Property<string>("Icon");
 
+                    b.Property<double>("Limit");
+
                     b.Property<string>("Name");
 
                     b.Property<int>("Type");
@@ -46,30 +46,6 @@ namespace TotalCost.UI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Groups");
-                });
-
-            modelBuilder.Entity("TotalCost.UI.Entity.Limit", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("EndDate");
-
-                    b.Property<int?>("GroupId");
-
-                    b.Property<DateTime>("StartDate");
-
-                    b.Property<double>("Sum");
-
-                    b.Property<double>("SumExceed");
-
-                    b.Property<int>("TimeType");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("GroupId");
-
-                    b.ToTable("Limits");
                 });
 
             modelBuilder.Entity("TotalCost.UI.Entity.Payment", b =>
@@ -94,13 +70,6 @@ namespace TotalCost.UI.Migrations
                     b.HasIndex("GroupId");
 
                     b.ToTable("Payments");
-                });
-
-            modelBuilder.Entity("TotalCost.UI.Entity.Limit", b =>
-                {
-                    b.HasOne("TotalCost.UI.Entity.Group", "Group")
-                        .WithMany("Limits")
-                        .HasForeignKey("GroupId");
                 });
 
             modelBuilder.Entity("TotalCost.UI.Entity.Payment", b =>

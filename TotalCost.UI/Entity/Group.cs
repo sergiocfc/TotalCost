@@ -16,7 +16,7 @@ namespace TotalCost.UI.Entity
         public string Icon { get; set; }
         public GroupType Type { get; set; }
         public virtual List<Payment> Payments { get; set; }
-        public List<Limit> Limits { get; set; }
+        public double Limit { get; set; }
     }
 
     /// <summary>
@@ -32,5 +32,17 @@ namespace TotalCost.UI.Entity
         /// Расход.
         /// </summary>
         Consumption
+    }
+
+    /// <summary>
+    /// Тип временного интервала.
+    /// </summary>
+    public enum TimeIntervalType
+    {
+        Day,
+        Week,
+        Month,
+        Year,
+        Custom
     }
 }

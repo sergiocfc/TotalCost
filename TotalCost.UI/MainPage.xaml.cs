@@ -19,13 +19,13 @@ namespace TotalCost.UI
         {
             using (Repository repo = new Repository())
             {
-                Bill b = new Bill
-                {
-                    Name = "Сбер",
-                    Type = BillType.Card,
-                    Sum = 3378.05
-                };
-                repo.AddBill(b);
+                //Bill b = new Bill
+                //{
+                //    Name = "Сбер",
+                //    Type = BillType.Card,
+                //    Sum = 3378.05
+                //};
+                //repo.AddBill(b);
             }
         }
     }

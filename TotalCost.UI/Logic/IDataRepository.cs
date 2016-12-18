@@ -89,16 +89,6 @@ namespace TotalCost.UI.Logic
         /// Добавить предел.
         /// </summary>
         /// <param name="newLimit"></param>
-        void AddLimit(Limit newLimit);
-        /// <summary>
-        /// Удалить предел.
-        /// </summary>
-        /// <param name="limit"></param>
-        void RemoveLimit(Limit limit);
-        /// <summary>
-        /// Получить сумму, на которую группа превышает предел.
-        /// </summary>
-        /// <param name="group"></param>
         double GetSumExceed(Group group);
     }
 }
