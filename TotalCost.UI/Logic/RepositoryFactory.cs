@@ -8,9 +8,9 @@ namespace TotalCost.UI.Logic
 {
     class RepositoryFactory
     {
-        private RepositoryFactory _default;
+        private static RepositoryFactory _default;
 
-        public RepositoryFactory Default
+        public static RepositoryFactory Default
         {
             get {
                 if (_default == null)

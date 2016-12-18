@@ -15,8 +15,12 @@ namespace TotalCost.UI.Entity
         public string Name { get; set; }
         public string Icon { get; set; }
         public GroupType Type { get; set; }
-        public virtual List<Payment> Payments { get; set; }
         public double Limit { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 
     /// <summary>

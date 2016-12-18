@@ -123,13 +123,13 @@
   <ItemGroup>
     <Content Include="Assets\Note.png" />
     <Content Include="Assets\PieChart.png" />
-    <EmbeddedResource Include="Icons\clothes.png" />
-    <EmbeddedResource Include="Icons\products.png" />
-    <EmbeddedResource Include="Icons\transport.png" />
-    <EmbeddedResource Include="Icons\card.png" />
-    <EmbeddedResource Include="Icons\cash.png" />
-    <EmbeddedResource Include="Icons\scholarship.png" />
-    <EmbeddedResource Include="Icons\wage.png" />
+    <Content Include="Assets\clothes.png" />
+    <Content Include="Assets\products.png" />
+    <Content Include="Assets\transport.png" />
+    <Content Include="Assets\card.png" />
+    <Content Include="Assets\cash.png" />
+    <Content Include="Assets\scholarship.png" />
+    <Content Include="Assets\wage.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

@@ -132,15 +132,45 @@ namespace TotalCost.UI.TotalCost_UI_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[3];
+            _typeNameTable = new string[18];
             _typeNameTable[0] = "TotalCost.UI.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[3] = "System.Collections.Generic.List`1<TotalCost.UI.Entity.Bill>";
+            _typeNameTable[4] = "Object";
+            _typeNameTable[5] = "TotalCost.UI.Entity.Bill";
+            _typeNameTable[6] = "Int32";
+            _typeNameTable[7] = "TotalCost.UI.Entity.BillType";
+            _typeNameTable[8] = "System.Enum";
+            _typeNameTable[9] = "System.ValueType";
+            _typeNameTable[10] = "String";
+            _typeNameTable[11] = "System.Collections.Generic.List`1<TotalCost.UI.Entity.Group>";
+            _typeNameTable[12] = "TotalCost.UI.Entity.Group";
+            _typeNameTable[13] = "TotalCost.UI.Entity.GroupType";
+            _typeNameTable[14] = "Double";
+            _typeNameTable[15] = "System.Collections.Generic.List`1<TotalCost.UI.Entity.Payment>";
+            _typeNameTable[16] = "TotalCost.UI.Entity.Payment";
+            _typeNameTable[17] = "System.DateTime";
 
-            _typeTable = new global::System.Type[3];
+            _typeTable = new global::System.Type[18];
             _typeTable[0] = typeof(global::TotalCost.UI.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[3] = typeof(global::System.Collections.Generic.List<global::TotalCost.UI.Entity.Bill>);
+            _typeTable[4] = typeof(global::System.Object);
+            _typeTable[5] = typeof(global::TotalCost.UI.Entity.Bill);
+            _typeTable[6] = typeof(global::System.Int32);
+            _typeTable[7] = typeof(global::TotalCost.UI.Entity.BillType);
+            _typeTable[8] = typeof(global::System.Enum);
+            _typeTable[9] = typeof(global::System.ValueType);
+            _typeTable[10] = typeof(global::System.String);
+            _typeTable[11] = typeof(global::System.Collections.Generic.List<global::TotalCost.UI.Entity.Group>);
+            _typeTable[12] = typeof(global::TotalCost.UI.Entity.Group);
+            _typeTable[13] = typeof(global::TotalCost.UI.Entity.GroupType);
+            _typeTable[14] = typeof(global::System.Double);
+            _typeTable[15] = typeof(global::System.Collections.Generic.List<global::TotalCost.UI.Entity.Payment>);
+            _typeTable[16] = typeof(global::TotalCost.UI.Entity.Payment);
+            _typeTable[17] = typeof(global::System.DateTime);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -176,6 +206,30 @@ namespace TotalCost.UI.TotalCost_UI_XamlTypeInfo
         }
 
         private object Activate_0_MainPage() { return new global::TotalCost.UI.MainPage(); }
+        private object Activate_3_List() { return new global::System.Collections.Generic.List<global::TotalCost.UI.Entity.Bill>(); }
+        private object Activate_5_Bill() { return new global::TotalCost.UI.Entity.Bill(); }
+        private object Activate_11_List() { return new global::System.Collections.Generic.List<global::TotalCost.UI.Entity.Group>(); }
+        private object Activate_12_Group() { return new global::TotalCost.UI.Entity.Group(); }
+        private object Activate_15_List() { return new global::System.Collections.Generic.List<global::TotalCost.UI.Entity.Payment>(); }
+        private object Activate_16_Payment() { return new global::TotalCost.UI.Entity.Payment(); }
+        private void VectorAdd_3_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::TotalCost.UI.Entity.Bill>)instance;
+            var newItem = (global::TotalCost.UI.Entity.Bill)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_11_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::TotalCost.UI.Entity.Group>)instance;
+            var newItem = (global::TotalCost.UI.Entity.Group)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_15_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::TotalCost.UI.Entity.Payment>)instance;
+            var newItem = (global::TotalCost.UI.Entity.Payment)item;
+            collection.Add(newItem);
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -190,6 +244,9 @@ namespace TotalCost.UI.TotalCost_UI_XamlTypeInfo
             case 0:   //  TotalCost.UI.MainPage
                 userType = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_0_MainPage;
+                userType.AddMemberName("Bills");
+                userType.AddMemberName("Groups");
+                userType.AddMemberName("Payments");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -201,16 +258,396 @@ namespace TotalCost.UI.TotalCost_UI_XamlTypeInfo
             case 2:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
+
+            case 3:   //  System.Collections.Generic.List`1<TotalCost.UI.Entity.Bill>
+                userType = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_3_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 4:   //  Object
+                xamlType = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 5:   //  TotalCost.UI.Entity.Bill
+                userType = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_5_Bill;
+                userType.AddMemberName("Id");
+                userType.AddMemberName("Type");
+                userType.AddMemberName("Name");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  Int32
+                xamlType = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 7:   //  TotalCost.UI.Entity.BillType
+                userType = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Cash", global::TotalCost.UI.Entity.BillType.Cash);
+                userType.AddEnumValue("Card", global::TotalCost.UI.Entity.BillType.Card);
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  System.Enum
+                userType = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                xamlType = userType;
+                break;
+
+            case 9:   //  System.ValueType
+                userType = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                xamlType = userType;
+                break;
+
+            case 10:   //  String
+                xamlType = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 11:   //  System.Collections.Generic.List`1<TotalCost.UI.Entity.Group>
+                userType = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_11_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 12:   //  TotalCost.UI.Entity.Group
+                userType = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_12_Group;
+                userType.AddMemberName("Id");
+                userType.AddMemberName("Name");
+                userType.AddMemberName("Icon");
+                userType.AddMemberName("Type");
+                userType.AddMemberName("Limit");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  TotalCost.UI.Entity.GroupType
+                userType = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Income", global::TotalCost.UI.Entity.GroupType.Income);
+                userType.AddEnumValue("Consumption", global::TotalCost.UI.Entity.GroupType.Consumption);
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 14:   //  Double
+                xamlType = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 15:   //  System.Collections.Generic.List`1<TotalCost.UI.Entity.Payment>
+                userType = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_15_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 16:   //  TotalCost.UI.Entity.Payment
+                userType = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_16_Payment;
+                userType.AddMemberName("Id");
+                userType.AddMemberName("Date");
+                userType.AddMemberName("Sum");
+                userType.AddMemberName("Note");
+                userType.AddMemberName("Group");
+                userType.AddMemberName("Bill");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 17:   //  System.DateTime
+                userType = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
             }
             return xamlType;
         }
 
 
+        private object get_0_MainPage_Bills(object instance)
+        {
+            var that = (global::TotalCost.UI.MainPage)instance;
+            return that.Bills;
+        }
+        private void set_0_MainPage_Bills(object instance, object Value)
+        {
+            var that = (global::TotalCost.UI.MainPage)instance;
+            that.Bills = (global::System.Collections.Generic.List<global::TotalCost.UI.Entity.Bill>)Value;
+        }
+        private object get_1_Bill_Id(object instance)
+        {
+            var that = (global::TotalCost.UI.Entity.Bill)instance;
+            return that.Id;
+        }
+        private void set_1_Bill_Id(object instance, object Value)
+        {
+            var that = (global::TotalCost.UI.Entity.Bill)instance;
+            that.Id = (global::System.Int32)Value;
+        }
+        private object get_2_Bill_Type(object instance)
+        {
+            var that = (global::TotalCost.UI.Entity.Bill)instance;
+            return that.Type;
+        }
+        private void set_2_Bill_Type(object instance, object Value)
+        {
+            var that = (global::TotalCost.UI.Entity.Bill)instance;
+            that.Type = (global::TotalCost.UI.Entity.BillType)Value;
+        }
+        private object get_3_Bill_Name(object instance)
+        {
+            var that = (global::TotalCost.UI.Entity.Bill)instance;
+            return that.Name;
+        }
+        private void set_3_Bill_Name(object instance, object Value)
+        {
+            var that = (global::TotalCost.UI.Entity.Bill)instance;
+            that.Name = (global::System.String)Value;
+        }
+        private object get_4_MainPage_Groups(object instance)
+        {
+            var that = (global::TotalCost.UI.MainPage)instance;
+            return that.Groups;
+        }
+        private void set_4_MainPage_Groups(object instance, object Value)
+        {
+            var that = (global::TotalCost.UI.MainPage)instance;
+            that.Groups = (global::System.Collections.Generic.List<global::TotalCost.UI.Entity.Group>)Value;
+        }
+        private object get_5_Group_Id(object instance)
+        {
+            var that = (global::TotalCost.UI.Entity.Group)instance;
+            return that.Id;
+        }
+        private void set_5_Group_Id(object instance, object Value)
+        {
+            var that = (global::TotalCost.UI.Entity.Group)instance;
+            that.Id = (global::System.Int32)Value;
+        }
+        private object get_6_Group_Name(object instance)
+        {
+            var that = (global::TotalCost.UI.Entity.Group)instance;
+            return that.Name;
+        }
+        private void set_6_Group_Name(object instance, object Value)
+        {
+            var that = (global::TotalCost.UI.Entity.Group)instance;
+            that.Name = (global::System.String)Value;
+        }
+        private object get_7_Group_Icon(object instance)
+        {
+            var that = (global::TotalCost.UI.Entity.Group)instance;
+            return that.Icon;
+        }
+        private void set_7_Group_Icon(object instance, object Value)
+        {
+            var that = (global::TotalCost.UI.Entity.Group)instance;
+            that.Icon = (global::System.String)Value;
+        }
+        private object get_8_Group_Type(object instance)
+        {
+            var that = (global::TotalCost.UI.Entity.Group)instance;
+            return that.Type;
+        }
+        private void set_8_Group_Type(object instance, object Value)
+        {
+            var that = (global::TotalCost.UI.Entity.Group)instance;
+            that.Type = (global::TotalCost.UI.Entity.GroupType)Value;
+        }
+        private object get_9_Group_Limit(object instance)
+        {
+            var that = (global::TotalCost.UI.Entity.Group)instance;
+            return that.Limit;
+        }
+        private void set_9_Group_Limit(object instance, object Value)
+        {
+            var that = (global::TotalCost.UI.Entity.Group)instance;
+            that.Limit = (global::System.Double)Value;
+        }
+        private object get_10_MainPage_Payments(object instance)
+        {
+            var that = (global::TotalCost.UI.MainPage)instance;
+            return that.Payments;
+        }
+        private void set_10_MainPage_Payments(object instance, object Value)
+        {
+            var that = (global::TotalCost.UI.MainPage)instance;
+            that.Payments = (global::System.Collections.Generic.List<global::TotalCost.UI.Entity.Payment>)Value;
+        }
+        private object get_11_Payment_Id(object instance)
+        {
+            var that = (global::TotalCost.UI.Entity.Payment)instance;
+            return that.Id;
+        }
+        private void set_11_Payment_Id(object instance, object Value)
+        {
+            var that = (global::TotalCost.UI.Entity.Payment)instance;
+            that.Id = (global::System.Int32)Value;
+        }
+        private object get_12_Payment_Date(object instance)
+        {
+            var that = (global::TotalCost.UI.Entity.Payment)instance;
+            return that.Date;
+        }
+        private void set_12_Payment_Date(object instance, object Value)
+        {
+            var that = (global::TotalCost.UI.Entity.Payment)instance;
+            that.Date = (global::System.DateTime)Value;
+        }
+        private object get_13_Payment_Sum(object instance)
+        {
+            var that = (global::TotalCost.UI.Entity.Payment)instance;
+            return that.Sum;
+        }
+        private void set_13_Payment_Sum(object instance, object Value)
+        {
+            var that = (global::TotalCost.UI.Entity.Payment)instance;
+            that.Sum = (global::System.Double)Value;
+        }
+        private object get_14_Payment_Note(object instance)
+        {
+            var that = (global::TotalCost.UI.Entity.Payment)instance;
+            return that.Note;
+        }
+        private void set_14_Payment_Note(object instance, object Value)
+        {
+            var that = (global::TotalCost.UI.Entity.Payment)instance;
+            that.Note = (global::System.String)Value;
+        }
+        private object get_15_Payment_Group(object instance)
+        {
+            var that = (global::TotalCost.UI.Entity.Payment)instance;
+            return that.Group;
+        }
+        private void set_15_Payment_Group(object instance, object Value)
+        {
+            var that = (global::TotalCost.UI.Entity.Payment)instance;
+            that.Group = (global::TotalCost.UI.Entity.Group)Value;
+        }
+        private object get_16_Payment_Bill(object instance)
+        {
+            var that = (global::TotalCost.UI.Entity.Payment)instance;
+            return that.Bill;
+        }
+        private void set_16_Payment_Bill(object instance, object Value)
+        {
+            var that = (global::TotalCost.UI.Entity.Payment)instance;
+            that.Bill = (global::TotalCost.UI.Entity.Bill)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "TotalCost.UI.MainPage.Bills":
+                userType = (global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TotalCost.UI.MainPage");
+                xamlMember = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember(this, "Bills", "System.Collections.Generic.List`1<TotalCost.UI.Entity.Bill>");
+                xamlMember.Getter = get_0_MainPage_Bills;
+                xamlMember.Setter = set_0_MainPage_Bills;
+                break;
+            case "TotalCost.UI.Entity.Bill.Id":
+                userType = (global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TotalCost.UI.Entity.Bill");
+                xamlMember = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember(this, "Id", "Int32");
+                xamlMember.Getter = get_1_Bill_Id;
+                xamlMember.Setter = set_1_Bill_Id;
+                break;
+            case "TotalCost.UI.Entity.Bill.Type":
+                userType = (global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TotalCost.UI.Entity.Bill");
+                xamlMember = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember(this, "Type", "TotalCost.UI.Entity.BillType");
+                xamlMember.Getter = get_2_Bill_Type;
+                xamlMember.Setter = set_2_Bill_Type;
+                break;
+            case "TotalCost.UI.Entity.Bill.Name":
+                userType = (global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TotalCost.UI.Entity.Bill");
+                xamlMember = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember(this, "Name", "String");
+                xamlMember.Getter = get_3_Bill_Name;
+                xamlMember.Setter = set_3_Bill_Name;
+                break;
+            case "TotalCost.UI.MainPage.Groups":
+                userType = (global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TotalCost.UI.MainPage");
+                xamlMember = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember(this, "Groups", "System.Collections.Generic.List`1<TotalCost.UI.Entity.Group>");
+                xamlMember.Getter = get_4_MainPage_Groups;
+                xamlMember.Setter = set_4_MainPage_Groups;
+                break;
+            case "TotalCost.UI.Entity.Group.Id":
+                userType = (global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TotalCost.UI.Entity.Group");
+                xamlMember = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember(this, "Id", "Int32");
+                xamlMember.Getter = get_5_Group_Id;
+                xamlMember.Setter = set_5_Group_Id;
+                break;
+            case "TotalCost.UI.Entity.Group.Name":
+                userType = (global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TotalCost.UI.Entity.Group");
+                xamlMember = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember(this, "Name", "String");
+                xamlMember.Getter = get_6_Group_Name;
+                xamlMember.Setter = set_6_Group_Name;
+                break;
+            case "TotalCost.UI.Entity.Group.Icon":
+                userType = (global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TotalCost.UI.Entity.Group");
+                xamlMember = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember(this, "Icon", "String");
+                xamlMember.Getter = get_7_Group_Icon;
+                xamlMember.Setter = set_7_Group_Icon;
+                break;
+            case "TotalCost.UI.Entity.Group.Type":
+                userType = (global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TotalCost.UI.Entity.Group");
+                xamlMember = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember(this, "Type", "TotalCost.UI.Entity.GroupType");
+                xamlMember.Getter = get_8_Group_Type;
+                xamlMember.Setter = set_8_Group_Type;
+                break;
+            case "TotalCost.UI.Entity.Group.Limit":
+                userType = (global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TotalCost.UI.Entity.Group");
+                xamlMember = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember(this, "Limit", "Double");
+                xamlMember.Getter = get_9_Group_Limit;
+                xamlMember.Setter = set_9_Group_Limit;
+                break;
+            case "TotalCost.UI.MainPage.Payments":
+                userType = (global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TotalCost.UI.MainPage");
+                xamlMember = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember(this, "Payments", "System.Collections.Generic.List`1<TotalCost.UI.Entity.Payment>");
+                xamlMember.Getter = get_10_MainPage_Payments;
+                xamlMember.Setter = set_10_MainPage_Payments;
+                break;
+            case "TotalCost.UI.Entity.Payment.Id":
+                userType = (global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TotalCost.UI.Entity.Payment");
+                xamlMember = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember(this, "Id", "Int32");
+                xamlMember.Getter = get_11_Payment_Id;
+                xamlMember.Setter = set_11_Payment_Id;
+                break;
+            case "TotalCost.UI.Entity.Payment.Date":
+                userType = (global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TotalCost.UI.Entity.Payment");
+                xamlMember = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember(this, "Date", "System.DateTime");
+                xamlMember.Getter = get_12_Payment_Date;
+                xamlMember.Setter = set_12_Payment_Date;
+                break;
+            case "TotalCost.UI.Entity.Payment.Sum":
+                userType = (global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TotalCost.UI.Entity.Payment");
+                xamlMember = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember(this, "Sum", "Double");
+                xamlMember.Getter = get_13_Payment_Sum;
+                xamlMember.Setter = set_13_Payment_Sum;
+                break;
+            case "TotalCost.UI.Entity.Payment.Note":
+                userType = (global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TotalCost.UI.Entity.Payment");
+                xamlMember = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember(this, "Note", "String");
+                xamlMember.Getter = get_14_Payment_Note;
+                xamlMember.Setter = set_14_Payment_Note;
+                break;
+            case "TotalCost.UI.Entity.Payment.Group":
+                userType = (global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TotalCost.UI.Entity.Payment");
+                xamlMember = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember(this, "Group", "TotalCost.UI.Entity.Group");
+                xamlMember.Getter = get_15_Payment_Group;
+                xamlMember.Setter = set_15_Payment_Group;
+                break;
+            case "TotalCost.UI.Entity.Payment.Bill":
+                userType = (global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TotalCost.UI.Entity.Payment");
+                xamlMember = new global::TotalCost.UI.TotalCost_UI_XamlTypeInfo.XamlMember(this, "Bill", "TotalCost.UI.Entity.Bill");
+                xamlMember.Getter = get_16_Payment_Bill;
+                xamlMember.Setter = set_16_Payment_Bill;
+                break;
+            }
             return xamlMember;
         }
     }

@@ -457,6 +457,27 @@
     <AppxPackagedFile Include="C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\Assets\PieChart.png">
       <PackagePath>Assets\PieChart.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\Assets\clothes.png">
+      <PackagePath>Assets\clothes.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\Assets\products.png">
+      <PackagePath>Assets\products.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\Assets\transport.png">
+      <PackagePath>Assets\transport.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\Assets\card.png">
+      <PackagePath>Assets\card.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\Assets\cash.png">
+      <PackagePath>Assets\cash.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\Assets\scholarship.png">
+      <PackagePath>Assets\scholarship.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\Assets\wage.png">
+      <PackagePath>Assets\wage.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>

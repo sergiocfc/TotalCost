@@ -14,10 +14,12 @@ C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\Tota
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\Microsoft.AspNetCore.Http.Abstractions.dll
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\Microsoft.CSharp.dll
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\Microsoft.Data.Sqlite.dll
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\Microsoft.EntityFrameworkCore.dll
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\Microsoft.EntityFrameworkCore.Sqlite.dll
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -69,6 +71,7 @@ C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\Tota
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\clrjit.dll
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\clrcompression.dll
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\System.Private.Uri.dll
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\sqlite3.dll
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\System.AppContext.dll
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\System.Buffers.dll
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\System.Collections.Concurrent.dll
@@ -147,7 +150,6 @@ C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\Tota
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\System.Xml.XDocument.dll
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\System.Xml.XmlDocument.dll
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\System.Xml.XmlSerializer.dll
-C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\TotalCost.UI.csprojResolveAssemblyReference.cache
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\App.g.i.cs
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\App.g.cs
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\MainPage.g.i.cs
@@ -227,10 +229,12 @@ C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\Tota
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\FxResources.System.Xml.XmlDocument.SR.resw
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\FxResources.System.Xml.XmlSerializer.SR.resw
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\Microsoft.AspNetCore.Http.Abstractions\en-us\Microsoft.AspNetCore.Http.Abstractions.Resources.resw
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\Microsoft.Data.Sqlite\en-US\Microsoft.Data.Sqlite.Strings.resw
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\Microsoft.EntityFrameworkCore\en-US\Microsoft.EntityFrameworkCore.Properties.CoreStrings.resw
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\Microsoft.EntityFrameworkCore.Design\en-US\Microsoft.EntityFrameworkCore.Design.Properties.DesignStrings.resw
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\Microsoft.EntityFrameworkCore.Relational\en-US\Microsoft.EntityFrameworkCore.Relational.Properties.RelationalStrings.resw
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\Microsoft.EntityFrameworkCore.Relational.Design\en-US\Microsoft.EntityFrameworkCore.Relational.Design.Properties.RelationalDesignStrings.resw
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\Microsoft.EntityFrameworkCore.Sqlite\en-US\Microsoft.EntityFrameworkCore.Sqlite.Properties.SqliteStrings.resw
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\Microsoft.Extensions.DependencyInjection\en-us\Microsoft.Extensions.DependencyInjection.Resources.resw
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\Microsoft.Extensions.DependencyInjection.Abstractions\en-us\Microsoft.Extensions.DependencyInjection.Abstractions.Resources.resw
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\Microsoft.Extensions.Logging.Abstractions\en-us\Microsoft.Extensions.Logging.Abstractions.Resource.resw
@@ -249,8 +253,4 @@ C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\Tota
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\ProjectArchitectures.txt
-C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\Microsoft.Data.Sqlite.dll
-C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\Microsoft.EntityFrameworkCore.Sqlite.dll
-C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\bin\x86\Debug\sqlite3.dll
-C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\Microsoft.Data.Sqlite\en-US\Microsoft.Data.Sqlite.Strings.resw
-C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\Microsoft.EntityFrameworkCore.Sqlite\en-US\Microsoft.EntityFrameworkCore.Sqlite.Properties.SqliteStrings.resw
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.UI\obj\x86\Debug\TotalCost.UI.csprojResolveAssemblyReference.cache

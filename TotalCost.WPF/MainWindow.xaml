@@ -1,0 +1,48 @@
+﻿<Window x:Class="TotalCost.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TotalCost.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition Height="240"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="22" Margin="20,6" FontFamily="Microsoft YaHei UI" Height="28">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC50202" Offset="0.004"/>
+                    <GradientStop Color="#FF250303" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>Total Cost</TextBlock>
+
+        <TextBlock Text="Сумма:" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+        <TextBlock Text="Счет:" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2"/>
+        <TextBlock Text="Группа:" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3"/>
+        <TextBlock Text="Заметка:" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4"/>
+
+        <TextBox Margin="5" Grid.Column="1" Grid.Row="1" Name="textBoxSum"/>
+        <ComboBox ItemsSource="{Binding Bills}" Name="comboBoxBill" Grid.Row="2" Grid.Column="1" Margin="5"/>
+        <ComboBox ItemsSource="{Binding Groups}" Name="comboBoxGroup" Grid.Row="3" Grid.Column="1" Margin="5"/>
+        <TextBox Margin="5" Grid.Column="1" Grid.Row="4" Name="textBoxNote"/>
+
+        <Button Name="buttonOk" Content="Добавить" Margin="5" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right"/>
+
+        <ListBox ItemsSource="{Binding Payments}" Name="listBoxPayments" Grid.Row="7" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>

@@ -10,6 +10,8 @@ namespace TotalCost.UI.Logic
 {
     interface IDataRepository : IDisposable
     {
+        Action<Payment> OnPaymentAdd { get; set; }
+        Action<Payment> OnPaymentRemove { get; set; }
         /// <summary>
         /// Добавить счет. Максимальное количество - 4.
         /// </summary>

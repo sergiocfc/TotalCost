@@ -11,6 +11,8 @@ namespace TotalCost.UI.Logic
     public class Repository : IDataRepository
     {
         private Context c = new Context();
+        public Action<Payment> OnPaymentAdd { get; set; }
+        public Action<Payment> OnPaymentRemove { get; set; }
 
         public bool AddBill(string name, BillType type, double sum)
         {
@@ -66,8 +68,9 @@ namespace TotalCost.UI.Logic
             if (newPayment.Bill == null)
                 throw new NullReferenceException("Платеж должен быть привязан к счету.");
 
-            c.Payments.Add(newPayment);
+            c.Attach(newPayment);
             c.SaveChanges();
+            OnPaymentAdd?.Invoke(newPayment);
         }
 
         public void Dispose()
@@ -172,30 +175,31 @@ namespace TotalCost.UI.Logic
 
         public void RemoveBill(Bill billToRemove, Bill saveBill)
         {
-            if (c.Bills.Count() == 1)
-                throw new ArgumentOutOfRangeException("Количество счетов не может быть равно 0");
-            if (billToRemove == saveBill)
-                throw new ArgumentException("Счета должны быть разными");
+            //if (c.Bills.Count() == 1)
+            //    throw new ArgumentOutOfRangeException("Количество счетов не может быть равно 0");
+            //if (billToRemove == saveBill)
+            //    throw new ArgumentException("Счета должны быть разными");
 
-            saveBill.Payments.AddRange(billToRemove.Payments);
-            c.Bills.Remove(billToRemove);
-            c.SaveChanges();
+            //saveBill.Payments.AddRange(billToRemove.Payments);
+            //c.Bills.Remove(billToRemove);
+            //c.SaveChanges();
         }
 
         public void RemoveGroup(Group groupToRemove, Group saveGroup)
         {
-            if (groupToRemove == saveGroup)
-                throw new ArgumentException("Группы должны быть разными");
+            //if (groupToRemove == saveGroup)
+            //    throw new ArgumentException("Группы должны быть разными");
 
-            saveGroup.Payments.AddRange(groupToRemove.Payments);
-            c.Groups.Remove(groupToRemove);
-            c.SaveChanges();
+            //saveGroup.Payments.AddRange(groupToRemove.Payments);
+            //c.Groups.Remove(groupToRemove);
+            //c.SaveChanges();
         }
 
         public void RemovePayment(Payment payment)
         {
             c.Payments.Remove(payment);
             c.SaveChanges();
+            OnPaymentRemove?.Invoke(payment);
         }
 
         public void TransferMoney(Bill billFrom, Bill billTo, double sum)

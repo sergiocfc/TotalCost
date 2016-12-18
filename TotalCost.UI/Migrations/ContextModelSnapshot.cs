@@ -74,11 +74,11 @@ namespace TotalCost.UI.Migrations
             modelBuilder.Entity("TotalCost.UI.Entity.Payment", b =>
                 {
                     b.HasOne("TotalCost.UI.Entity.Bill", "Bill")
-                        .WithMany("Payments")
+                        .WithMany()
                         .HasForeignKey("BillId");
 
                     b.HasOne("TotalCost.UI.Entity.Group", "Group")
-                        .WithMany("Payments")
+                        .WithMany()
                         .HasForeignKey("GroupId");
                 });
         }
