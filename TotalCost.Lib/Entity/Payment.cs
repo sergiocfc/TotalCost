@@ -21,7 +21,11 @@ namespace TotalCost.UI.Lib
 
         public override string ToString()
         {
-            return $"{Date.DayOfWeek}: {Group} {Sum}";
+            return String.Format("{0}: {1} {2}{3}",
+                Date.DayOfWeek,
+                Group, 
+                (Group.Type == GroupType.Income) ? "+" : "-",
+                Sum);
         }
     }
 

@@ -1,6 +1,6 @@
 ﻿namespace TotalCost.UI.Lib
 {
-    class RepositoryFactory
+    public class RepositoryFactory
     {
         private static RepositoryFactory _default;
 

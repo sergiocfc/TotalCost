@@ -1,9 +1,10 @@
-namespace TotalCost.Lib.Migrations
+﻿namespace TotalCost.Lib.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using TotalCost.UI.Lib;
 
     internal sealed class Configuration : DbMigrationsConfiguration<TotalCost.UI.Lib.Context>
     {
@@ -13,20 +14,73 @@ namespace TotalCost.Lib.Migrations
             ContextKey = "TotalCost.UI.Lib.Context";
         }
 
-        protected override void Seed(TotalCost.UI.Lib.Context context)
+        protected override void Seed(Context c)
         {
-            //  This method will be called after migrating to the latest version.
+            
+            if (c.Groups.Count() == 0)
+            {
+                var groups = new Group[]
+                {
+                        new Group
+                        {
+                            Name = "Base",
+                            Type = GroupType.Income,
+                        },
+                        new Group
+                        {
+                            Name = "TransferFrom",
+                            Type = GroupType.Consumption
+                        },
+                        new Group
+                        {
+                            Name = "TransferFrom",
+                            Type = GroupType.Income
+                        },
+                        new Group
+                        {
+                            Name = "Продукты",
+                            Type = GroupType.Consumption,
+                            Icon = "clothes.png"
+                        },
+                        new Group
+                        {
+                            Name = "Одежда",
+                            Type = GroupType.Consumption,
+                            Icon = "clothes.png"
+                        },
+                        new Group
+                        {
+                            Name = "Проезд",
+                            Type = GroupType.Consumption,
+                            Icon = "transport.png"
+                        },
+                        new Group
+                        {
+                            Name = "Стипендия",
+                            Type = GroupType.Income,
+                            Icon = "scholarship.png"
+                        },
+                        new Group
+                        {
+                            Name = "Зарплата",
+                            Type = GroupType.Income,
+                            Icon = "wage.png"
+                        }
+                };
+                c.Groups.AddRange(groups);
+            }
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            if (c.Bills.Count() == 0)
+            {
+                var b = new Bill
+                {
+                    Name = "Кошелёк",
+                    Type = BillType.Cash
+                };
+                c.Bills.Add(b);
+            }
+
+            c.SaveChanges();
         }
     }
 }

@@ -4,7 +4,7 @@ using TotalCost.Lib.ViewModels;
 
 namespace TotalCost.UI.Lib
 {
-    interface IDataRepository : IDisposable
+    public interface IDataRepository : IDisposable
     {
         Action<Payment> OnPaymentAdd { get; set; }
         Action<Payment> OnPaymentRemove { get; set; }

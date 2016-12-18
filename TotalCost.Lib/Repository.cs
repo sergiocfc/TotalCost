@@ -194,6 +194,7 @@ namespace TotalCost.UI.Lib
 
         public void RemovePayment(Payment payment)
         {
+            c.Payments.Attach(payment);
             c.Payments.Remove(payment);
             c.SaveChanges();
             OnPaymentRemove?.Invoke(payment);

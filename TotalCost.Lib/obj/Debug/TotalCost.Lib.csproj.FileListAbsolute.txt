@@ -8,3 +8,5 @@ C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\Tota
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.Lib\obj\Debug\TotalCost.Lib.csprojResolveAssemblyReference.cache
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.Lib\obj\Debug\TotalCost.Lib.dll
 C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.Lib\obj\Debug\TotalCost.Lib.pdb
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.Lib\obj\Debug\TotalCost.Lib.Migrations.InitialCreate.resources
+C:\Users\Roman\Documents\Visual Studio 2017\Projects\TeamProjects\TC\Sergeo\TotalCost\TotalCost.Lib\obj\Debug\TotalCost.Lib.csproj.GenerateResource.Cache
