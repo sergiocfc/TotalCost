@@ -7,7 +7,7 @@ using TotalCost.UI.Entity;
 
 namespace TotalCost.UI.ViewModels
 {
-    class StatByGroupViewModel
+    public class StatByGroupViewModel
     {
         public Group Group { get; set; }
         public double Min { get; set; }

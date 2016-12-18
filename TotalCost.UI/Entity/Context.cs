@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TotalCost.UI.Entity
 {
-    class Context : DbContext
+    public class Context : DbContext
     {
         public DbSet<Bill> Bills { get; set; }
         public DbSet<Group> Groups { get; set; }

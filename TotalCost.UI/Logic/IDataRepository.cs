@@ -14,7 +14,7 @@ namespace TotalCost.UI.Logic
         /// Добавить счет. Максимальное количество - 4.
         /// </summary>
         /// <param name="newBill"></param>
-        bool AddBill(Bill newBill);
+        bool AddBill(string name, BillType type, double sum);
         /// <summary>
         /// Получить остаток на счете.
         /// </summary>
@@ -69,6 +69,12 @@ namespace TotalCost.UI.Logic
         /// <param name="timeInvtervalType"></param>
         /// <returns></returns>
         List<StatByGroupViewModel> GetStatByGroups(TimeIntervalType timeInvtervalType);
+        /// <summary>
+        /// Получить минимальное, максимальное и среднее значение для каждой группы за промежуток времени.
+        /// </summary>
+        /// <param name="timeInvtervalType"></param>
+        /// <returns></returns>
+        List<StatByGroupViewModel> GetStatByGroups(TimeIntervalType timeInvtervalType, DateTime dateIn);
         /// <summary>
         /// Удалить платеж.
         /// </summary>

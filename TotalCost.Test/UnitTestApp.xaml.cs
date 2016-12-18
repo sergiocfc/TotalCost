@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,11 +14,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Microsoft.EntityFrameworkCore;
-using TotalCost.UI.Entity;
-using TotalCost.UI.Logic;
 
-namespace TotalCost.UI
+namespace TotalCost.Test
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -31,74 +28,6 @@ namespace TotalCost.UI
         /// </summary>
         public App()
         {
-            using (var c = new Context())
-            {
-                if (c.Groups.Count() == 0)
-                {
-                    var groups = new Group[]
-                    {
-                        new Group
-                        {
-                            Name = "Base",
-                            Type = GroupType.Income,
-                        },
-                        new Group
-                        {
-                            Name = "TransferFrom",
-                            Type = GroupType.Consumption
-                        },
-                        new Group
-                        {
-                            Name = "TransferFrom",
-                            Type = GroupType.Income
-                        },
-                        new Group
-                        {
-                            Name = "Продукты",
-                            Type = GroupType.Consumption,
-                            Icon = "clothes.png"
-                        },
-                        new Group
-                        {
-                            Name = "Одежда",
-                            Type = GroupType.Consumption,
-                            Icon = "clothes.png"
-                        },
-                        new Group
-                        {
-                            Name = "Проезд",
-                            Type = GroupType.Consumption,
-                            Icon = "transport.png"
-                        },
-                        new Group
-                        {
-                            Name = "Стипендия",
-                            Type = GroupType.Income,
-                            Icon = "scholarship.png"
-                        },
-                        new Group
-                        {
-                            Name = "Зарплата",
-                            Type = GroupType.Income,
-                            Icon = "wage.png"
-                        }
-                    };
-                    c.Groups.AddRange(groups);
-                }
-
-                if (c.Bills.Count() == 0)
-                {
-                    var b = new Bill
-                    {
-                        Name = "Кошелёк",
-                        Type = BillType.Cash
-                    };
-                    c.Bills.Add(b);
-                }
-
-                c.SaveChanges();
-            }
-
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
@@ -110,6 +39,14 @@ namespace TotalCost.UI
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+
+#if DEBUG
+            if (System.Diagnostics.Debugger.IsAttached)
+            {
+                this.DebugSettings.EnableFrameRateCounter = true;
+            }
+#endif
+
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,
@@ -129,19 +66,13 @@ namespace TotalCost.UI
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
             }
+            
+            Microsoft.VisualStudio.TestPlatform.TestExecutor.UnitTestClient.CreateDefaultUI();
 
-            if (e.PrelaunchActivated == false)
-            {
-                if (rootFrame.Content == null)
-                {
-                    // When the navigation stack isn't restored navigate to the first page,
-                    // configuring the new page by passing required information as a navigation
-                    // parameter
-                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
-                }
-                // Ensure the current window is active
-                Window.Current.Activate();
-            }
+            // Ensure the current window is active
+            Window.Current.Activate();
+
+            Microsoft.VisualStudio.TestPlatform.TestExecutor.UnitTestClient.Run(e.Arguments);
         }
 
         /// <summary>
