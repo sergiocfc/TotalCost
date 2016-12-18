@@ -102,6 +102,7 @@
     <Compile Include="Entity\Payment.cs" />
     <Compile Include="Logic\IDataRepository.cs" />
     <Compile Include="Logic\Repository.cs" />
+    <Compile Include="Logic\RepositoryFactory.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
