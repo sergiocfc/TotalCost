@@ -15,7 +15,7 @@ namespace TotalCost.UI.Entity
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Filename=totalcost.db");
+            optionsBuilder.UseSqlite("Filename=tc.db");
         }
     }
 }

@@ -33,19 +33,62 @@ namespace TotalCost.UI
         {
             using (var c = new Context())
             {
-                c.Database.Migrate();
+                if (c.Groups.Count() == 0)
+                {
+                    var groups = new Group[]
+                    {
+                        new Group
+                        {
+                            Name = "Base",
+                            Type = GroupType.Income,
+                        },
+                        new Group
+                        {
+                            Name = "Продукты",
+                            Type = GroupType.Consumption,
+                            Icon = "clothes.png"
+                        },
+                        new Group
+                        {
+                            Name = "Одежда",
+                            Type = GroupType.Consumption,
+                            Icon = "clothes.png"
+                        },
+                        new Group
+                        {
+                            Name = "Проезд",
+                            Type = GroupType.Consumption,
+                            Icon = "transport.png"
+                        },
+                        new Group
+                        {
+                            Name = "Стипендия",
+                            Type = GroupType.Income,
+                            Icon = "scholarship.png"
+                        },
+                        new Group
+                        {
+                            Name = "Зарплата",
+                            Type = GroupType.Income,
+                            Icon = "wage.png"
+                        }
+                    };
+                    c.Groups.AddRange(groups);
+                }
+
+                if (c.Bills.Count() == 0)
+                {
+                    var b = new Bill
+                    {
+                        Name = "Кошелёк",
+                        Type = BillType.Cash
+                    };
+                    c.Bills.Add(b);
+                }
+
+                c.SaveChanges();
             }
 
-            //using (var repo = new Repository())
-            //{
-            //    var bill = new Bill
-            //    {
-            //        Name = "Сбер",
-            //        Type = BillType.Card
-            //    };
-
-            //    repo.AddBill(bill);
-            //}
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }

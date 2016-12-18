@@ -122,6 +122,13 @@
   <ItemGroup>
     <Content Include="Assets\Note.png" />
     <Content Include="Assets\PieChart.png" />
+    <EmbeddedResource Include="Icons\clothes.png" />
+    <EmbeddedResource Include="Icons\products.png" />
+    <EmbeddedResource Include="Icons\transport.png" />
+    <EmbeddedResource Include="Icons\card.png" />
+    <EmbeddedResource Include="Icons\cash.png" />
+    <EmbeddedResource Include="Icons\scholarship.png" />
+    <EmbeddedResource Include="Icons\wage.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -141,6 +148,7 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '15.0' ">
     <VisualStudioVersion>15.0</VisualStudioVersion>
   </PropertyGroup>
